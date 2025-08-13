@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Contador Básico</h1>
+    <div id="contador">0</div>
+    <div class="content">
+        <button id="decrementar">-1</button>
+        <button id="decrementar10">-10</button>
+        <button id="resetar">Zerar</button>
+        <button id="incrementar">+1</button>
+        <button id="incrementar10">+10</button>
+    </div>
+
+    
+
+    <script>
+        const contadorDisplay = document.getElementById('contador');
+        let contador  = 0;
+
+        document.getElementById('incrementar').addEventListener('click',() => {
+            contador ++;
+            atualizarDisplay();
+        })
+
+        document.getElementById('incrementar10').addEventListener('click',() => {
+            contador += 10;
+            atualizarDisplay();
+        })
+
+        document.getElementById('decrementar10').addEventListener('click',() => {
+            contador -= 10;
+            atualizarDisplay();
+        })
+
+        document.getElementById('decrementar').addEventListener('click',() => {
+            contador --;
+            atualizarDisplay();
+        })
+
+        document.getElementById('resetar').addEventListener('click',() => {
+            contador = 0 ;
+            atualizarDisplay();
+        })
+
+        function atualizarDisplay(){
+            contadorDisplay.textContent  = contador;
+
+            if (contador < 0) {
+                contadorDisplay.classList.add('vermelho');
+            } else {
+                contadorDisplay.classList.remove('vermelho');
+            }
+    }
+
+    </script>
+</body>
+</html>
