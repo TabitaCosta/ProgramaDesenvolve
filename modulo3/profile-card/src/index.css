@@ -1,0 +1,127 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500&display=swap');
+
+/* Container do card */
+.profile-card {
+  background: #fff;
+  border-radius: 16px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  padding: 20px;
+  max-width: 320px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.profile-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 16px rgba(0,0,0,0.15);
+}
+
+/* Topo: imagem + nome/título */
+.profile-header {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.profile-header img {
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid #ddd;
+}
+
+.profile-header h3 {
+  margin: 0;
+  font-size: 1.25rem;
+  color: #333;
+}
+
+.profile-header p {
+  margin: 0;
+  font-size: 0.9rem;
+  color: #777;
+}
+
+/* Descrição */
+.profile-description {
+  font-size: 0.95rem;
+  line-height: 1.4;
+  color: #444;
+}
+
+/* Rodapé */
+.profile-footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.profile-footer .icons {
+  display: flex;
+  gap: 8px;
+}
+
+.profile-footer .icons span {
+  width: 28px;
+  height: 28px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #1b1a1a;
+  border-radius: 50%;
+  font-size: 0.85rem;
+  cursor: pointer;
+  transition: background 0.2s ease;
+}
+
+.profile-footer .icons span:hover {
+  background: #ddd;
+}
+
+.profile-footer button {
+  background: #007bff;
+  color: #fff;
+  border: none;
+  padding: 8px 14px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 0.9rem;
+  transition: background 0.2s ease;
+}
+
+.profile-footer button:hover {
+  background: #0056b3;
+}
+
+/* Container principal da lista */
+.profile-list {
+  padding: 40px 20px;
+  text-align: center;
+}
+
+/* Título */
+.profile-list h2 {
+  font-size: 2rem;
+  margin-bottom: 30px;
+  color: #222;
+}
+
+/* Grid de cards */
+.profile-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 24px;
+  justify-items: center;
+}
+
+.profile-card h3 {
+  font-family: 'Montserrat', sans-serif;
+}
+
+.profile-card p,
+.profile-description {
+  font-family: 'Inter', sans-serif;
+}
